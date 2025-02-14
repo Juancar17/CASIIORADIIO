@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Canciones = () => {
   const [canciones, setCanciones] = useState([]);
@@ -81,9 +82,15 @@ const Canciones = () => {
   );
 
   return (
-    <div className="container mx-auto p-6 max-w-7xl">
+    <div className="container mx-auto p-6 max-w-7xl mt-28">
       {/* 🔎 Título y barra de búsqueda */}
       <div className="flex flex-col md:flex-row justify-between items-center mb-6">
+        <Link
+          to="/"
+          className="text-indigo-400 hover:text-indigo-300 hover:bg-indigo-700 px-2 py-1 rounded-md inline-block"
+        >
+          ← Volver
+        </Link>
         <h1 className="text-2xl font-bold text-white">🎵 Canciones</h1>
         <input
           type="text"

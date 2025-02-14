@@ -63,7 +63,7 @@ const ArtistaDetalles = () => {
 
   return (
     <motion.div
-      className="container mx-auto p-6 space-y-6 max-w-7xl mt-12"
+      className="container mx-auto p-6 space-y-6 max-w-7xl mt-28"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}

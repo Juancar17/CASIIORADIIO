@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 const Albumes = () => {
   const [albumesPorGenero, setAlbumesPorGenero] = useState({});
   const [filteredAlbumes, setFilteredAlbumes] = useState({});
@@ -68,7 +68,7 @@ const Albumes = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 max-w-7xl">
+    <div className="container mx-auto p-6 max-w-7xl mt-28">
       {/* 🎵 Título */}
       <motion.h1
         className="text-2xl font-bold text-white text-center"
@@ -78,6 +78,12 @@ const Albumes = () => {
       >
         🎵 Álbumes por Género
       </motion.h1>
+      <Link
+        to="/"
+        className="text-indigo-400 hover:text-indigo-300 hover:bg-indigo-700 px-2 py-1 rounded-md inline-block"
+      >
+        ← Volver
+      </Link>
 
       {/* 🔎 Controles de filtro y ordenación */}
       <div className="flex flex-wrap justify-center gap-4 my-6">

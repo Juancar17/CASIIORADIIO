@@ -33,13 +33,19 @@ const Artistas = () => {
   }, []);
 
   return (
-    <div className="container mx-auto p-6 max-w-7xl">
+    <div className="container mx-auto p-6 max-w-7xl mt-28">
       {/* Título y botón "Mostrar todos" */}
       <div className="flex justify-between items-center mb-6">
+        <Link
+          to="/"
+          className="text-indigo-400 hover:text-indigo-300 hover:bg-indigo-700 px-2 py-1 rounded-md inline-block"
+        >
+          ← Volver
+        </Link>
         <h1 className="text-2xl font-bold text-center text-white">
           Artistas populares
         </h1>
-        <Link to="/artistas" className="text-gray-400 hover:text-white text-sm">
+        <Link to="/" className="text-gray-400 hover:text-white text-sm">
           Mostrar todos
         </Link>
       </div>
