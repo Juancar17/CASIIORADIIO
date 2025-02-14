@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="bg-[#000] mt-28 text-white py-16 px-8" id="nosotros">
+      <section className="bg-[#000] text-white py-16 px-8" id="nosotros">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           {/* Logo para móviles */}
           <motion.img

@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <section className="bg-[#000] mt-28 text-white py-16 px-8">
+      <section className="bg-[#000] mt-18 text-white py-16 px-8">
         <header className="container mx-auto max-w-7xl bg-[#000]">
           <Navbar /> {/* Barra de Navegación */}
         </header>
