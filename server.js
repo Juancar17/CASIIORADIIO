@@ -1,13 +1,21 @@
-const express = require("express");
-const app = express();
-const PORT = process.env.PORT || 3000; // Render usa PORT automáticamente
+import express from "express"; // 🔄 Cambiado require() por import
+import path from "path";
+import { fileURLToPath } from "url";
 
-app.use(express.static("dist")); // Servir archivos de Vite
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Configuración para __dirname en ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Servir archivos estáticos de dist
+app.use(express.static("dist"));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/dist/index.html");
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+  console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
